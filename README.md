@@ -1,2 +1,2 @@
 # grizzly-stitch
-Embroidery Digitizer
+The Web-Based Embroidery Digitizer
