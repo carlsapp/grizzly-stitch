@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <polyline points="100 200, 200 100, 400 100, 400 200, 300 200, 300 190, 290 190, 290 200, 100 200"
+      stroke="orange" fill="transparent" stroke-width="1"/>
+  <polyline points="0 250, 290 250, 290 240, 300 240, 300 250, 450 250, 450 50, 200 50, 0 250"
+      stroke="blue" fill="transparent" stroke-width="1"/>
+</svg>

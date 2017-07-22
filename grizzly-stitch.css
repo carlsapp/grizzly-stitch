@@ -1,0 +1,111 @@
+/**
+ * Copyright 2017 Grizzly Stitch
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+**/
+
+body {
+  /*min-height: 100px;*/ /* Not sure why this is in the bootstrap example code */
+  padding-top: 70px;  /* Needed for the body to not be under the fixed header at the top */
+}
+
+.choose-file {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* We add some trickery CSS here to prevent the default file chooser button from showing up in our menu options
+that choose files. */
+.choose-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* Scale canvas with resize attribute to full size*/
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+
+.shape-list {
+  color: #337ab7;
+}
+
+.shape-list-title {
+  /* Add some padding so we don't look weird when selected */
+  padding: 2px 5px 2px 10px;
+  /* Add 1px margin (could do border instead) so there's spacing between rows when selected.
+     The negative margin on the left is to counteract the padding and make sure things line
+     up when not selected. */
+  margin: 1px 0 1px -10px;
+  border-radius: 5px;
+}
+
+.shape-list .selected-row {
+  background-color: #337ab7;
+  color: white;
+}
+
+.shape-list .indent {
+  margin-left: 30px;
+  padding-bottom: 5px;
+}
+
+/**
+ * The shape-action-icons class is applied to the icons that are to the right of a shape's name in
+ * the shape tree on the left side of the app.
+***/
+.action-icons {
+  padding-left: 10px;
+  font-size: .8em;
+}
+
+.action-icons i {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.expand-icon {
+  cursor: pointer;
+}
+
+.myselectable {
+  cursor: default;
+}
+
+.non-editable-text {
+  cursor: default;
+}
+
+.editable-text {
+  cursor: text;
+}
+
+/* The editable-click class is originally defined in the X-Editable library. We don't like the 
+dashed bottom border it adds, so we'll override here. */
+.editable-click {
+  border-bottom: none;
+}
