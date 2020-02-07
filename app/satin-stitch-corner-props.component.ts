@@ -82,14 +82,14 @@ export class SatinStitchCornerPropsComponent {
   }
   
   createXEditable() {
-    const component = this;
+    // const component = this;
     const featherDistanceElem = $("#feather-distance-" + this.uniqueId);
     featherDistanceElem.editable({
       success: function(response: any, newValue: number) {
         console.log("In xeditable for corner: ", response, newValue, $(this).data('editable'));
-        component.CornerProps.featherDistance = parseFloat(newValue);
-        component.StitchPath.reStitch();
-      }
+        this.CornerProps.featherDistance = parseFloat(newValue.toString());
+        this.StitchPath.reStitch();
+      }.bind(this)
     });
   }
   

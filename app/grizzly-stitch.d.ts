@@ -19,6 +19,8 @@ declare var stitchTypes: any[];
 declare var exportDataFormats: any[];
 declare var STITCH_TYPE_FLAGS: any;
 declare function initializeDrawingCanvas(a: string): void;
+declare function GetUniqueId(): void;
+declare function drawBoundingBox(a: any): void;
 declare class StitchType {
     constructor(name: string, stitchFunction: () => void, stitchProps: object, defaultStitchProps: object);
     name: string;
@@ -70,7 +72,10 @@ declare class ShapeGroup {
   selected: boolean;
   id: number;
   name: string;
-  constructor(public shapes?: Shape[], public paperJSGroup?: any);
+  // TODO Clean up these any props
+  paperJSGroup: any;
+  shapes: any;
+  constructor(shapes?: Shape[], paperJSGroup?: any);
   reStitch();
   select();
   deselect();
@@ -79,4 +84,16 @@ declare class ShapeGroup {
   scale(width: number, height: number)
   moveX(x: number);
   moveY(y: number);
+}
+
+declare class StitchPath {
+  stitchProps: any;
+  reStitch: any;
+  setStitchType: any;
+  stitchPoints: any;
+  path: any;
+  stitchOrder: any;
+  expanded: any;
+  stitchType: any;
+  remove: any;
 }

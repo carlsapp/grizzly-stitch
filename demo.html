@@ -52,8 +52,8 @@
         transpiling. These includes are not used and should be removed when executing ahead-of-time
         compilation.
     -->
-    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
-    <script src="app/systemjs-boot.js"></script>
+    <!--script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></!--script>
+    <script src="app/systemjs-boot.js"></script-->
     
     <!-- Google Analytics - Carl has access to this account if you need the data for a feature you're developing -->
     <script>
@@ -78,6 +78,6 @@
     <script src="stitch-running.js"></script>
     <script src="stitch-satin-fill.js"></script>
     <script src="file-format-dst.js"></script>
-  </body>
+  <script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
   <!--script src="build/angular-ui.js"></script-->
 </html>

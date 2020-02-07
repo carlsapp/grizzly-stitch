@@ -23,9 +23,9 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { ShapeTreeComponent } from './shape-tree.component';
 import { NavBarComponent } from './nav-bar.component';
-import { SatinStitchPropsComponent } from './satin-stitch-props.component.ts';
-import { SatinStitchCornerPropsComponent } from './satin-stitch-corner-props.component.ts';
-import { StitchPathComponent } from './stitchpath-props.component.ts';
+import { SatinStitchPropsComponent } from './satin-stitch-props.component';
+import { SatinStitchCornerPropsComponent } from './satin-stitch-corner-props.component';
+import { StitchPathComponent } from './stitchpath-props.component';
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 

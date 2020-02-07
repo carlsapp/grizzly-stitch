@@ -97,7 +97,7 @@ export class ShapeTreeComponent {
           }
         });
         $('#shapeGroup-' + shapeGroup.id + '-width').editable({
-          success: function(response: any, newValue: string) {
+          success: function(response: any, newValue: number) {
             shapeGroup.changeWidth(controller.unitsToPx(newValue));
           }
         });
@@ -169,11 +169,11 @@ export class ShapeTreeComponent {
     // This gets called whenever the user clicks on the arrow next to the shape group name, shape name, or stitch path
     branch.expanded = !branch.expanded;
     if(branch instanceof Shape) {
-      $('#collapseShape'+branch.id).collapse('toggle');
+      (<any>$('#collapseShape'+branch.id)).collapse('toggle');
     } else if(branch instanceof StitchPath) {
-      $('#collapseStitch'+branch.stitchOrder).collapse('toggle');
+      (<any>$('#collapseStitch'+branch.stitchOrder)).collapse('toggle');
     } else if(branch instanceof ShapeGroup) {
-      $('#collapseShapeGroup'+branch.id).collapse('toggle');
+      (<any>$('#collapseShapeGroup'+branch.id)).collapse('toggle');
     }
   }
   

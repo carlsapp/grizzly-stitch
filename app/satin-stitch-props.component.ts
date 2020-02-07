@@ -49,14 +49,14 @@ export class SatinStitchPropsComponent {
     let stitchWidthElem = $('#' + this.stitchWidthId);
     stitchWidthElem.editable({
       success: function(response: any, newValue: number) {
-        stitchPath.stitchProps.width = parseFloat(newValue);
+        stitchPath.stitchProps.width = parseFloat(newValue.toString());
         stitchPath.reStitch();
       }
     });
     let stitchDensityElem = $('#' + this.stitchDensityId);
     stitchDensityElem.editable({
       success: function(response: any, newValue: number) {
-        stitchPath.stitchProps.density = parseFloat(newValue);
+        stitchPath.stitchProps.density = parseFloat(newValue.toString());
         stitchPath.reStitch();
       }
     });

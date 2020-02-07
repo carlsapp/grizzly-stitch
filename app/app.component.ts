@@ -59,10 +59,10 @@ export class AppComponent {
     };
     
     // Configure our defaults for X-Editable
-    $.fn.editable.defaults.container = 'body';
-    $.fn.editable.defaults.type = 'text';
-    $.fn.editable.defaults.unsavedclass = '';
-    $.fn.editable.defaults.inputclass = '';
+    (<any>$).fn.editable.defaults.container = 'body';
+    (<any>$).fn.editable.defaults.type = 'text';
+    (<any>$).fn.editable.defaults.unsavedclass = '';
+    (<any>$).fn.editable.defaults.inputclass = '';
   }
   
   ngAfterViewInit() {

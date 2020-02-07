@@ -15,7 +15,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
-import { platformBrowser }    from '@angular/platform-browser';
-import { AppModuleNgFactory } from '../build/app/app.module.ngfactory';
-console.log('Running AOT compiled');
-platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+// import { platformBrowser }    from '@angular/platform-browser';
+// import { AppModuleNgFactory } from '../build/app/app.module.ngfactory';
+// console.log('Running AOT compiled');
+// platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app.module';
+import { environment } from './app/environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
